@@ -1,4 +1,4 @@
-namespace Sakk
+namespace Sakk.Pieces
 {
     public class Pawn : Piece
     {
@@ -14,7 +14,7 @@ namespace Sakk
         }
 
         // Uj metodus a szabalyok ellenorzesehez
-        public bool IsValidMove(int fromRow, int fromCol, int toRow, int toCol)
+        public override bool IsValidMove(int fromRow, int fromCol, int toRow, int toCol)
         {
             int direction = (Color == "White") ? -1 : 1;
 
