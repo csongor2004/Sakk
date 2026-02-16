@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\blackbishop.png" />
+    <None Remove="Images\blackking.png" />
+    <None Remove="Images\blackknight.png" />
+    <None Remove="Images\blackpawn.png" />
+    <None Remove="Images\blackqueen.png" />
+    <None Remove="Images\blackrook.png" />
+    <None Remove="Images\whitebishop.png" />
+    <None Remove="Images\whiteking.png" />
+    <None Remove="Images\whiteknight.png" />
+    <None Remove="Images\whitepawn.png" />
+    <None Remove="Images\whitequeen.png" />
+    <None Remove="Images\whiterook.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\sakk test\sakk test.csproj" />
+    <ProjectReference Include="..\Sakk\Sakk.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\blackbishop.png" />
+    <Resource Include="Images\blackking.png" />
+    <Resource Include="Images\blackknight.png" />
+    <Resource Include="Images\blackpawn.png" />
+    <Resource Include="Images\blackqueen.png" />
+    <Resource Include="Images\blackrook.png" />
+    <Resource Include="Images\whitebishop.png" />
+    <Resource Include="Images\whiteking.png" />
+    <Resource Include="Images\whiteknight.png" />
+    <Resource Include="Images\whitepawn.png" />
+    <Resource Include="Images\whitequeen.png" />
+    <Resource Include="Images\whiterook.png" />
+  </ItemGroup>
+
+</Project>

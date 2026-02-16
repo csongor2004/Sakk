@@ -8,21 +8,29 @@ namespace Sakk.Pieces
 
         public override void Move(string newPosition)
         {
-            // Egyszeru ellenorzes: a gyalog csak elore lephet (itt most csak a poziciot frissitjuk)
+            
             Position = newPosition;
             System.Console.WriteLine("Move registered for Pawn: " + Position);
         }
 
-        // Uj metodus a szabalyok ellenorzesehez
+
         public override bool IsValidMove(int fromRow, int fromCol, int toRow, int toCol)
         {
             int direction = (Color == "White") ? -1 : 1;
+            int startRow = (Color == "White") ? 6 : 1;
+            int deltaRow = toRow - fromRow;
+            int deltaCol = Math.Abs(toCol - fromCol);
 
-            // Alapeset: 1-et lep elore ugyanabban az oszlopban
-            if (fromCol == toCol && toRow == fromRow + direction)
+            if (deltaCol == 0)
+            {
+                if (deltaRow == direction) return true;
+                if (fromRow == startRow && deltaRow == 2 * direction) return true;
+            }
+            else if (deltaCol == 1 && deltaRow == direction)
             {
                 return true;
             }
+
             return false;
         }
     }
